@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Jaskaranjit Dhaliwal - 100368461
+#This script does addition, subtraction, multiplication and division of two numbers provided by user.
+
+#enter two number
+echo -n "Enter two numbers: "
+read a b
+
+#arithmetics
+echo "Sum of $a and $b:" $((a+b))
+echo "Difference of $a and $b:" $((a-b))
+echo "Product of $a and $b:" $((a*b))
+echo "Quotient of $a and $b:" $((a/b))
+

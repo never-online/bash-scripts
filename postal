@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#Jaskaranjit Dhaliwal - 100368461
+#This script write out all information provided by the user in the format of Canadian mailing address.
+
+#first and last name
+echo -n "Please enter your first and last name: "
+read name
+
+#street addrsss
+echo -n "Please enter your home street address: "
+read add
+
+#city and province
+echo -n "Which city do you live in? " 
+read city
+echo -n "and in which province is $city located? "
+read prov
+
+#postal code
+echo -n "What is your home address postal code(should be in format A1B 2C3): "
+read pcode
+
+#complete mailing address
+echo "Here is your complete mailing address:"
+echo "$name"
+echo "$add"
+echo "$city, $prov"
+echo "$pcode"

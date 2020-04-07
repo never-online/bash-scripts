@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#Jaskaranjit Dhaliwal - 100368461
+#This script write's out a greeting to the user. User provides first and last name as command flags.
+
+#Display greetings 
+echo "Hey $1 $2, nice to  meet you."

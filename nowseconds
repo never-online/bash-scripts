@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Jaskaranjit Dhaliwal - 100368461
+#This script calculates the number of seconds elapsed today.
+
+#Calculate current hours, mins and seconds
+((hrs=`date '+%H'`))
+((mins=`date '+%M'`))
+((secs=`date '+%S'`))
+
+#Calculates seconds elapsed today
+((elapsedsecs=$(( ((($hrs*60)+$mins)*60)+$secs ))))
+
+#Display seconds elapsed today
+echo "Elapsed seconds today: $elapsedsecs"

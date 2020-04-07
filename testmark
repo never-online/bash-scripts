@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Jaskaranjit Dhaliwal - 100368461
+#This script calculates and show the percentage derived from the score and the score’s maximum. Also write out “Pass” if the percentage is greater than or equal to 50, and “Fail” if the percentage is less than 50. 
+
+#Enter score and score's maximum
+echo -n "Enter marks obtained: "
+read score
+echo -n "Total marks for the test: " 
+read total
+
+#Calculate percentage
+((percent=$score*100/$total))
+
+#Write out “Pass” if the percentage is greater than or equal to 50, and “Fail” if the percentage is less than 50.
+if (( $percent > 100 || $percent < 0 )); then
+  echo "Invalid marks entered."
+elif (( $percent >= 50 && $percent <= 100 )); then
+  echo "Congratulations! You passed with ${percent}%"
+else
+  echo "Your percentage is ${percent}%. Unfortunately you failed the test."
+fi
+
+
+

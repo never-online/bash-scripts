@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Jaskaranjit Dhaliwal - 100368461
+#This script displays the names of the files in the current directory that have write permission for the file owner.
+
+for filename in * ; do
+ echo "$filename"
+done
+
+

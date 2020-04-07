@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#Jaskaranjit Dhaliwal - 100368461
+#This script shows a menu of three options to the user. The user will choose one of the options, and the script will then do the action corresponding to the option.
+
+#Display the options and read input
+echo "Choose an option."
+
+echo "	a.    Count the number of words in a file."
+echo "	b.    Display the current date and time."
+echo "	c.    Display the list of users who are currently logged on to the computer (hal)."
+
+echo -n "Option: "
+read option
+
+#Calculate current date & time
+now=$(date)
+
+#Run the funtion based on user choice
+case $option in
+   a) echo -n "Enter file name: "
+      read fname
+      wc -w $fname 
+      ;;
+   b) echo $now
+	;;
+   c) w
+	;;
+   *) echo "invalid input"
+esac

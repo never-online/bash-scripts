@@ -1,0 +1,43 @@
+#!/bin/bash
+
+#Jaskaranjit Dhaliwal - 100368461
+#This script asks the user to enter a file name, and then checks to see if the file has execute permission.
+
+#Retry loop
+loop=true
+while $loop
+ do
+
+#Get file name from user
+ echo -n "File name for execute permission check: "
+ read fname
+
+#Check if file exists
+ if test -f "$fname"; then
+
+#Check if file has execution permissions
+    if test -x "$fname"; then
+      echo "$fname has execution permission"
+    else
+      echo "$fname does not have execution permission"
+    fi
+ else
+     echo "File does not exist"
+ fi
+
+#Ask if user wants to search another file
+ echo "Do you want to check another file? ( yes or no )"
+ read yn
+
+#Check if loop is required to countinue
+ if [ "$yn" == "no" ]; then
+  loop=false
+ elif [ "$yn" == "yes" ]; then
+  :
+ else 
+  loop=false
+  echo "invalid input. exiting..."
+ fi
+
+done
+
