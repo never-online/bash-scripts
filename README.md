@@ -1,4 +1,4 @@
-# info1211-bashscripts
+# INFO1211 Assignmet 4
 
 Scripts
 
@@ -12,9 +12,8 @@ V5K 1R6		 postal code (letter, digit, letter, space, digit, letter, space)
 
 3.	Write a Bash script called hello that uses command line arguments to allow the user to put two strings after the command name, when the script is being executed. These strings should represent a first and last name. The script should then write out a greeting to the user that includes the first and last name. Here is an example of how the script might work (the first line represents what the user types to launch the script):
 [user@HAL] hello John Smith		 you type the script name followed by first and last name
-Hey John Smith, nice to see you	 script writes out the greeting
-
-To do this, you will need to use the variables $1 and $2 in your code. Remember that in a script, variables of this type represent arguments that are typed on the command line after the command’s name, when the script is launched.
+Hey John Smith, nice to see you	 script writes out the greeting.
+To do this, you will need to use the variables $1 and $2 in your code. Remember that in a script, variables of this type            represent arguments that are typed on the command line after the command’s name, when the script is launched.
 
 4.	Write a Bash script called testmark that allows a user to enter a test score and what the test was out of. The script should then calculate and show the percentage derived from the score and the score’s maximum. After this, the script should write out “Pass” if the percentage is greater than or equal to 50, and “Fail” if the percentage is less than 50. Also, the script should write “Invalid” if the percentage is either greater than 100 or less than zero. Hint: you should use if…elif… to do this.
 
@@ -31,7 +30,6 @@ hours=`date '+%H'`
 This will determine the current hour, and assign this number to hours. After you do this for minutes and seconds as well, you can use a formula to compute the total number of seconds.
 
 7.	Write a Bash script called runnable which asks the user to enter a file name, and then checks to see if the file has execute permission. The script should then display whether or not this is so. If the name given does not correspond to an existing file, the script should show an error message. After the script has done this for one file, it should allow the user to do this again. The script should loop until the user no longer wants to continue.
-
 I suggest you do this without using a loop first. To do the checking for just one file, you will need to use if…elif in combination with the file condition codes that determine if a file exists and if it has execute permission. After you have this working correctly, enclose your code with a while or until loop that will allow the user to choose whether to repeat the script.
 
 8.	Write a Bash script called canedit that displays the names of the files in the current directory that have write permission (permission being for the file owner). For example, output from the script might look like:
